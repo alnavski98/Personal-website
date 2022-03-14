@@ -9,15 +9,22 @@
   /* Navigation bar*/
   .topnav {
     overflow: hidden;
-    background-color:rgb(48, 48, 54); rgb(0, 0, 0);
+    background-color:rgb(48, 48, 54);
   }
   
+  /* Image properties */
+  .topnav img {
+    float: left;
+    padding: 2.5px 16px;
+    border-radius: 50%;
+  }
+
   /* Text properties */
   .topnav a {
     float: left;
     color: #ffffff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 16px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -29,7 +36,8 @@
   }
     
   .topnav a.active {
-    background-color: #1900ff;
+    /* background-color: #1900ff;*/
+    border-bottom: 2px solid #1900ff !important;
     color: white;
   }
 
@@ -40,6 +48,10 @@
 
   .description {
     margin-left: 25px;
+  }
+
+  .description a:hover {
+    color:rgb(89, 71, 255)
   }
 
   /* .description .test {
@@ -66,7 +78,7 @@
   }
 
   .footer .footer-section-about table a {
-    color:rgb(133, 122, 228);
+    color:rgb(89, 71, 255);
   }
   .footer .footer-section-about th {
     text-align: left;
