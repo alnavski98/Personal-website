@@ -5,9 +5,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <style>
+        #map {
+            height: 400px;
+            width: 100%;
+         }
+        </style>
     </head>
     <body>
         <!-- Navigation bar -->
+        <div id="container">
         <div class="topnav">
             <img class="picture" src="Aozora.jpg" width="45" height="45">
             <a href="index.html">Home</a>
@@ -16,7 +23,7 @@
             <a href="playground.html">Playground</a>
         </div>
 
-        <div id="container">
+        <div class="text-content">
             <h1 class="welcome">About me</h1>
         <!-- CV content -->
             <p class="description">
@@ -55,7 +62,7 @@
                         <tr>
                             <th class="links">Facebook: </th>
                             <td>
-                                <a href="https://www.facebook.com/alexnav.ski/">Alex Nav Ski</a>
+                                <a href="https://www.facebook.com/alexnav.ski/">Alexander Navasca Skinstad</a>
                             </td>
                         </tr>
                         <tr>
@@ -72,5 +79,27 @@
                 Copyright &copy; 2021 Aozora
             </div>
         </div>
+        </div>
+        <script>
+            // Initialize and display the map
+            function initMap() {
+            // Create a map object and specify the DOM element for display
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 63.406457, lng: 10.449703 }, // Coordinates for Heggdalsringen 57, Trondheim
+                zoom: 11 // Zoom level for the map
+            });
+
+            // Add a marker for the address
+            const marker = new google.maps.Marker({
+                position: { lat: 63.406457, lng: 10.449703 },
+                map: map,
+                title: 'Heggdalsringen 57, Trondheim'
+            });
+            }
+        </script>
+
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATBC5yZwsC-PHvPY12GMRrfF1qN6gksPY&callback=initMap">
+        </script>
     </body>
 </html>
