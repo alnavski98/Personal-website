@@ -23,7 +23,7 @@ function incrementer() {
     //alert(count++);
     //console.log("Clicked");
     count++
-    document.getElementById('increment').innerHTML = "Count: " + count + ", Value: " + parseFloat(Math.random() * 100).toFixed(2)
+    document.getElementById('increment').innerHTML = "Count: " + count
 } 
 
 function reset() {
