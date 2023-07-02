@@ -41,35 +41,37 @@
         <div class="footer">
             <div class="footer-content">
                 <div class="footer-section-about">
-                    <h3>Follow me:</h3>
-                    <table>     
-                        <tr>
-                            <th class="links">Discord: </th> 
-                            <td>Aozora#1020</td> 
-                        </tr>
-                        <tr>
-                            <th class="links">Telegram: </th>
-                            <td>Aozora98</td>
-                        </tr>
-                        <tr>
-                            <th class="links">Email: </th>
-                            <td>
-                                <a href="mailto:alnavski98@gmail.com">alnavski98@gmail.com</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="links">Facebook: </th>
-                            <td>
-                                <a href="https://www.facebook.com/alexnav.ski/">Alexander Navasca Skinstad</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="links">Twitter: </th>
-                            <td>
-                                <a href="https://twitter.com/AozoraHusky">@Aozora</a>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="footer-text">
+                        <h3>Follow me:</h3>
+                        <table>     
+                            <tr>
+                                <th class="links">Discord: </th> 
+                                <td>Aozora#1020</td> 
+                            </tr>
+                            <tr>
+                                <th class="links">Telegram: </th>
+                                <td>Aozora98</td>
+                            </tr>
+                            <tr>
+                                <th class="links">Email: </th>
+                                <td>
+                                    <a href="mailto:alnavski98@gmail.com">alnavski98@gmail.com</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="links">Facebook: </th>
+                                <td>
+                                    <a href="https://www.facebook.com/alexnav.ski/">Alexander Navasca Skinstad</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="links">Twitter: </th>
+                                <td>
+                                    <a href="https://twitter.com/AozoraHusky">@Aozora</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -78,26 +80,5 @@
             </div>
         </div>
         </div>
-        <script>
-            // Initialize and display the map
-            function initMap() {
-            // Create a map object and specify the DOM element for display
-            const map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 63.406457, lng: 10.449703 }, // Coordinates for Heggdalsringen 57, Trondheim
-                zoom: 11 // Zoom level for the map
-            });
-
-            // Add a marker for the address
-            const marker = new google.maps.Marker({
-                position: { lat: 63.406457, lng: 10.449703 },
-                map: map,
-                title: 'Heggdalsringen 57, Trondheim'
-            });
-            }
-        </script>
-
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATBC5yZwsC-PHvPY12GMRrfF1qN6gksPY&callback=initMap">
-        </script>
     </body>
 </html>
