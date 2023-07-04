@@ -59,6 +59,9 @@ h1 {
   color: white;
 }
 
+#time {
+  float: right;
+}
 
 /* Welcome screen */
 .text-content {
