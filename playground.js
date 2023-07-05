@@ -66,3 +66,12 @@ window.addEventListener('DOMContentLoaded', () => {
     // Update the time every second
     setInterval(updateTime, 1000);
   });
+
+  function hamburberMenu() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
