@@ -4,39 +4,77 @@
         <title>Personal webpage</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="playground.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <script type="text/javascript" src="/js/playground.js"></script>
+        <!-- <style>
+            button {
+                top: 11%;
+                left:55%;
+                width:100px;
+                height:40px;
+                position: absolute;
+                z-index: 2;
+            }
+        </style> -->
+        <style>
+            .wrapper {
+                text-align: center;
+            }
+
+            .wrapper .button {
+                margin: auto;
+                position: absolute;
+            }
+
+            .wrapper2 .button {
+                margin: auto;
+                position: absolute;
+            }
+
+            button {
+                width:100px;
+                height:40px;
+            }
+
+            #increment {
+                margin-left: 650px;
+            }
+        </style>
     </head>
-    
     <body>
         <!-- Navigation bar -->
         <div id="container">
         <div class="topnav">
-            <img class="picture" src="Aozora.jpg" width="45" height="45">
+            <img class="picture" src="/img/Aozora.jpg" width="45" height="45">
             <a href="index.html">Home</a>
-            <a class="active" href="comissioned_art.html">Comissioned art</a>
+            <a href="comissioned_art.html">Comissioned art</a>
             <a href="about.html">About</a>
-            <a href="playground.html">Playground</a>
+            <a class="active" href="playground.html">Playground</a>
             <a href="weather.html">Weather</a>
             <a id="time"></a>
         </div>
         
         
             <!-- Introduction -->
-            <div class="text-content">
-                <h1 class="welcome">Comissioned art</h1>
-                <p class="description">
-                    Here I'll be posting comissions I've received for my fursona, Aozora, once I figure out how to upload artpieces
-                </p>
-                <p class="description">
-                    However in the meantime enjoy my art gallery on <a href="https://www.furaffinity.net/user/aozorahusky/">Furaffinity</a>
-                </p>
-                <p class="description">
-                    More content coming...
-                </p>
-                <p class="Aozora_selfie"> <img src="Aozora_selfie.jpg" alt=""></p>
+        <div class="text-content">
+            <h1 class="welcome">Fun stuff</h1>
+            <p class="description">
+                Here I'll be experimenting with different functionalities in javascript to see
+                how it looks on the website
+            </p>
+            <div class="wrapper">
+                <button onclick="incrementer()">INCREMENT</button>
+                <button onclick="reset()">RESET</button>
+                <button onclick="time()">DISPLAY TIME</button>
+                <button onclick="displayName()">NAME</button>
             </div>
-        
+            <p class="description" type="text" id="increment" value="0"></p>
+            <p class="description" type="test" id="time"></p>
+            <p class="description" type="test" id="name"></p>
+            <p class="description" type="test" id="people"></p>
+                More content coming...
+            </p>
+        </div>      
 
         <!-- Footer -->
         <div class="footer">
