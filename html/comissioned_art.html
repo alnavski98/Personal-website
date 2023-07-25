@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <!-- Add function to scale images/artpieces equally when clicked but keep aspect ratio -->
+        <style>
+            #art-gallery {
+                width: 600px;
+                margin: 0 auto;
+            }
+
+            #current-image {
+                width: 100%;
+            }
+
+            #art-thumbs {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .thumb {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        </style>
         <title>Personal webpage</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
@@ -34,7 +59,11 @@
                 <p class="description">
                     More content coming...
                 </p>
-                <p class="Aozora_selfie"> <img src="/img/Aozora_selfie.jpg" alt=""></p>
+                <p id="thumbnail">Select a thumbnail below to view the image</p> 
+                <div id="art-gallery">
+                    <img id="current-art" src="/aozora_art/art1.jpg" alt="Artpiece 1">
+                    <div id="art-thumbs"></div>
+                </div>
             </div>
         
 
@@ -82,4 +111,24 @@
         </div>
         </div>
     </body>
+            <script>
+            var artThumbs = document.getElementById("art-thumbs");
+            var currentArt = document.getElementById("current-art");
+            
+
+            for(var i=1; i<=13; i++) {
+                var thumb = document.createElement("img");
+
+                thumb.src = "/aozora_art/art" + i + ".jpg";
+                thumb.alt = "Artpiece " + i;
+
+                thumb.classList.add("thumb");
+                artThumbs.appendChild(thumb);
+                thumb.addEventListener(
+                    "click", function() {
+                        currentArt.src = this.src;
+                    }
+                );
+            }
+        </script>
 </html>
