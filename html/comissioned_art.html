@@ -4,21 +4,31 @@
     <!-- Add function to scale images/artpieces equally when clicked but keep aspect ratio -->
         <style>
             #art-gallery {
-                width: 600px;
-                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
             }
 
-            #current-image {
+            #art-container {
+                max-width: 100%;
+            }
+            
+            #current-art {
+                display: block;
                 width: 100%;
+                height: auto;
+                margin: 0 auto;
             }
 
             #art-thumbs {
                 display: flex;
-                justify-content: center;
+                overflow: auto;
                 margin-top: 20px;
             }
 
             .thumb {
+            
                 width: 80px;
                 height: 80px;
                 object-fit: cover;
@@ -60,12 +70,14 @@
                     More content coming...
                 </p>
                 <p id="thumbnail">Select a thumbnail below to view the image</p> 
-                <div id="art-gallery">
+                
+            </div>
+            <div id="art-gallery">
+                <div id="art-container">
                     <img id="current-art" src="/aozora_art/art1.jpg" alt="Artpiece 1">
                     <div id="art-thumbs"></div>
                 </div>
-            </div>
-        
+                </div>
 
         <!-- Footer -->
         <div class="footer">
@@ -112,9 +124,23 @@
         </div>
     </body>
             <script>
+            var desiredHeight = 600;
             var artThumbs = document.getElementById("art-thumbs");
             var currentArt = document.getElementById("current-art");
             
+            function setEqualHeight(desiredHeight) {
+                // Get the natural width and height of the current image
+                var naturalWidth = currentArt.naturalWidth;
+                var naturalHeight = currentArt.naturalHeight;
+
+                // Calculate the new width based on the desired height while preserving the aspect ratio
+                var aspectRatio = naturalWidth / naturalHeight;
+                var newWidth = desiredHeight * aspectRatio;
+
+                // Set the new width and height
+                currentArt.style.width = newWidth + "px";
+                currentArt.style.height = desiredHeight + "px";
+            }
 
             for(var i=1; i<=13; i++) {
                 var thumb = document.createElement("img");
@@ -127,8 +153,16 @@
                 thumb.addEventListener(
                     "click", function() {
                         currentArt.src = this.src;
+                        setEqualHeight(desiredHeight);
                     }
                 );
             }
+
+            window.addEventListener("load", function() {
+                setEqualHeight(desiredHeight); // Set the desired height on page load (e.g., 300px)
+            });
+            window.addEventListener("resize", function() {
+                setEqualHeight(desiredHeight); // Set the desired height on window resize (e.g., 300px)
+            });
         </script>
 </html>
