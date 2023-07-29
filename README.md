@@ -1,10 +1,9 @@
 # Personal-website
 ```
-
 A simple personal website, using native HTML, CSS and Javascript to learn fundamental web developement concepts.
 
-## General Information
 
+## General Information
 ```
 
 I have always wanted to make my own website, so I figured that making a relatively simple website using native HTML, CSS and Javascript could be a great way to learn fundamental web developement concepts.
@@ -15,10 +14,10 @@ We'll see if I use this website for a specific purpose sometime later. But for n
 
 ## Todo
 ```
-* Scale website correctly for use with mobile devices
-* Add a mobile navigation menu
-* Make the art gallery look more fancy
+- Scale website correctly for use with mobile devices
+- Add a mobile navigation menu
+- Make the art gallery look more fancy
 
 ## Acknowledgements
 ```
-* The layout of this website was inspired by https://khtangent.com/
+- The layout of this website was inspired by https://khtangent.com/
