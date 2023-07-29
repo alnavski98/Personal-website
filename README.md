@@ -14,6 +14,7 @@ We'll see if I use this website for a specific purpose sometime later. But for n
 
 ## Todo
 ```
+
 - Scale website correctly for use with mobile devices
 - Add a mobile navigation menu
 - Make the art gallery look more fancy
