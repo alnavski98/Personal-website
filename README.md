@@ -1,10 +1,11 @@
 # Personal-website
 ---
+
 A simple personal website, using native HTML, CSS and Javascript to learn fundamental web developement concepts.
 
 
 ## General Information
-```
+--
 
 I have always wanted to make my own website, so I figured that making a relatively simple website using native HTML, CSS and Javascript could be a great way to learn fundamental web developement concepts.
 
