@@ -1,5 +1,5 @@
 # Personal-website
-```
+---
 A simple personal website, using native HTML, CSS and Javascript to learn fundamental web developement concepts.
 
 
