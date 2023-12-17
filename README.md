@@ -14,11 +14,11 @@ As I don't have anything in particular I'd want to do with the website, it mainl
 We'll see if I use this website for a specific purpose sometime later. But for now this is just a hobby project where I play around with web developement.
 
 ## Todo
-```
+--
 Scale website correctly for use with mobile devices
 Add a mobile navigation menu
 Make the art gallery look more fancy
 
 ## Acknowledgements
-```
+--
 - The layout of this website was inspired by https://khtangent.com/
